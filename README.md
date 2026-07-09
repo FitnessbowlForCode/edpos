@@ -5,7 +5,7 @@
 >Die Video-Apps Apollo und Hermes sind Teil der EDPOS-Projekts.
 >Sie stellen ein Prof-of-Concpet dar.
 
--Webseite der Projekts-
+-Webseite des Projekts-
 https://plus-edpos.duckdns.org/
 
 -Apollo-
@@ -32,9 +32,12 @@ Hier kannst du etwas weiter ausholen. Warum hast du das Projekt gestartet? Welch
 * [Wordpress](https://wordpress.org/)
 * [Docker](https://www.docker.com/)
 * [minio](https://www.min.io/)
-* [pip](https://pypi.org/)
+
+### Geschrieben in
 * [JavaScript]
 * [Python]
+* [pip](https://pypi.org/)
+
 ---
 
 ## Features
