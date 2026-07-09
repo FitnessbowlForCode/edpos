@@ -3,8 +3,14 @@
 [![Status](https://img.shields.io/badge/status-aktiv-brightgreen.svg)]()
 [![Lizenz](https://img.shields.io/badge/lizenz-MIT-blue.svg)]()
 
-> Eine kurze, prägnante Beschreibung des Projekts. Was macht dieses Projekt und welches Problem löst es? (1–2 Sätze).
+Die Video-Apps Apollo und Hermes sind Teil der EDPOS-Projekts. Sie stellen ein Prof-of-Concpet dar.
+-Webseite der Projekts-
+https://plus-edpos.duckdns.org/
 
+-Apollo-
+https://plus-app1.duckdns.org/
+-Hermes-
+https://plus-app2.duckdns.org/
 ---
 
 ## 📋 Inhaltsverzeichnis
@@ -39,16 +45,3 @@ Hier kannst du etwas weiter ausholen. Warum hast du das Projekt gestartet? Welch
 * **Feature 1:** Kurze Beschreibung des coolen Features.
 * **Feature 2:** Noch ein tolles Feature, das erwähnenswert ist.
 * **Responsive Design:** Sieht auf Desktop und Mobilgeräten super aus.
-
----
-
-## 🛠 Erste Schritte
-
-Folge diesen Anweisungen, um eine lokale Kopie des Projekts zum Laufen zu bringen.
-
-### Voraussetzungen
-
-Welche Software muss vorab installiert sein? (z.B. Node.js, Docker, etc.)
-
-```bash
-npm install npm@latest -g
