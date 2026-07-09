@@ -1,6 +1,4 @@
-# # EDPOS
-
-[![Status](https://img.shields.io/badge/status-aktiv-brightgreen.svg)]()
+# EDPOS
 
 >Die Video-Apps Apollo und Hermes sind Teil der EDPOS-Projekts.
 >Sie stellen ein Prof-of-Concpet dar.
