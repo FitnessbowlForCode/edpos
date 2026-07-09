@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/style.css"> 
+    <meta name="theme-color" content="#91C499">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+
+<body>
+
+    <h1>
+        <span style="cursor: pointer;" onclick="window.location.href='/'">( •̀ ω •́ )✧ Apollo App 1<small style="font-size:12px; color:#595959;">(Server: nbg1)</small></span>
+    </h1>
+
+    <div class="card" id="uploadCard">
+        <div style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleUploadForm()">
+            <h3 style="margin: 0;">Neues Video veröffentlichen</h3>
+            <button type="button" id="toggleUploadBtn" style="padding: 5px 10px; font-size: 14px;">+</button>
+        </div>
+        
+        <form id="uploadForm" style="display: none; margin-top: 15px;">
+            <label for="videoTitle">Videotitel *</label>
+            <input type="text" id="videoTitle" required placeholder="Wie soll dein Video heißen?">
+
+            <label for="videoDesc">Beschreibung</label>
+            <textarea id="videoDesc" placeholder="Beschreibe kurz dein Video..."></textarea>
+
+            <label for="videoFile">Video-Datei (MP4) *</label>
+            <input type="file" id="videoFile" accept="video/mp4" required>
+
+            <button type="submit" id="submitBtn">Upload starten</button>
+        </form>
+        <div id="uploadStatus" class="status"></div>
+    </div>
+
+    <div class="card" id="feedCard">
+        <h3>Video Feed</h3>
+        <div class="video-grid" id="videoGrid">
+            <p>Lade Videos aus der Datenbank...</p>
+        </div>
+    </div>
+
+    <div class="card" id="watchCard" style="display: none;">
+        <button onclick="window.location.href='/'" class="back-btn">← Zurück zur Startseite</button>
+        
+        <video id="singleVideoPlayer" controls></video>
+        
+        <div class="video-info-watch">
+            <h2 id="singleVideoTitle">Videotitel</h2>
+            
+            <div class="video-meta-row">
+                <span id="singleVideoMeta">0 Aufrufe</span>
+                
+                <div class="interaction-buttons">
+                    <button id="likeBtn">
+                        Likes <span id="likeCount">0</span>
+                    </button>
+                    <button id="dislikeBtn">
+                        Dislikes <span id="dislikeCount">0</span>
+                    </button>
+                </div>
+
+                <span id="singleVideoOrigin" class="badge">App 1</span>
+            </div>
+
+            <div class="quality-selector">
+                <label for="qualitySelect">Qualität:</label>
+                <select id="qualitySelect">
+                    <option value="-1">Automatisch (Auto)</option>
+                </select>
+            </div>
+            
+            <hr class="divider">
+            <p id="singleVideoDesc">Beschreibung...</p>
+        </div>
+
+        <hr class="divider font-space">
+        <div class="comments-section">
+            <h3>Kommentare</h3>
+            
+            <div class="comment-input-row">
+                <input type="text" id="commentInput" placeholder="Schreibe einen öffentlichen Kommentar...">
+                <button id="commentBtn">Posten</button>
+            </div>
+
+            <div id="commentsList">
+                <p class="no-comments">Noch keine Kommentare vorhanden.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+
+</html>

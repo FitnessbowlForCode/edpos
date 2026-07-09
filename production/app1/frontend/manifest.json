@@ -1,0 +1,39 @@
+{
+  "short_name": "Apollo",
+  "name": "Apollo Video Streaming PWA",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1179/1179069.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1179/1179069.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.placeholders.dev/?width=1280&height=720&text=Apollo+Desktop+Vorschau&bgColor=%231e293b&textColor=%23ffffff",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Apollo auf dem Desktop"
+    },
+    {
+      "src": "https://images.placeholders.dev/?width=360&height=640&text=Apollo+Mobile+Vorschau&bgColor=%231e293b&textColor=%23ffffff",
+      "sizes": "360x640",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Apollo auf dem Smartphone"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#f0f2f5",
+  "theme-color": "#1e293b",
+  "display": "standalone",
+  "orientation": "portrait"
+}

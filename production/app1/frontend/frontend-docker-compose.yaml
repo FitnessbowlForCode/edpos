@@ -1,0 +1,33 @@
+services:
+  # 1. Der Türsteher (Proxy)
+  npm:
+    image: 'jc21/nginx-proxy-manager:latest'
+    container_name: app1-proxy1
+    hostname: app1-proxy1
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    volumes:
+      - ./nginx/npm_data:/data
+      - ./nginx/letsencrypt:/etc/letsencrypt
+    networks:
+      - testnet
+
+  # 2. Der Webserver für deine PWA (Frontend)
+  frontend:
+    image: nginx:stable-alpine3.23-perl
+    container_name: app1-frontend1
+    hostname: app1-frontend1
+    restart: unless-stopped
+    # KEINE PORTS NACH AUSSEN! NPM redet intern mit ihm.
+    volumes:
+      - .:/usr/share/nginx/html
+    networks:
+      - testnet
+
+networks:
+  testnet:
+    name: test_network
+    external: true

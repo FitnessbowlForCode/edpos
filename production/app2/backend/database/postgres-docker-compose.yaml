@@ -1,0 +1,26 @@
+services:
+  postgres_db:
+    image: postgres:16-alpine3.20
+    container_name: app2-postgres2
+    hostname: app2-postgres2
+    environment:
+      - POSTGRES_USER=${postgres_user}
+      - POSTGRES_PASSWORD=${postgres_password}
+      - POSTGRES_DB=${postgres_db}
+    volumes:
+      - app2_postgres2:/var/lib/postgresql/data
+    networks:
+      - testnet
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h localhost -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      start_period: 30s
+
+networks:
+  testnet:
+    name: test_network
+    external: true
+
+volumes:
+  app2_postgres2:

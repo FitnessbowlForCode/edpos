@@ -1,0 +1,15 @@
+services: 
+  frontend:
+    image: nginx:stable-alpine3.23-perl
+    container_name: app2-frontend2
+    hostname: app2-frontend2
+    restart: unless-stopped
+    volumes:
+      - .:/usr/share/nginx/html
+    networks:
+      - testnet
+
+networks:
+  testnet:
+    name: test_network
+    external: true

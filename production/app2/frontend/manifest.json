@@ -1,0 +1,39 @@
+{
+  "short_name": "Hermes",
+  "name": "Hermes Video Streaming PWA",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3163/3163478.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3163/3163478.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.placeholders.dev/?width=1280&height=720&text=Hermes+Desktop+Vorschau&bgColor=%236366f1&textColor=%23ffffff",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Hermes auf dem Desktop"
+    },
+    {
+      "src": "https://images.placeholders.dev/?width=360&height=640&text=Hermes+Mobile+Vorschau&bgColor=%236366f1&textColor=%23ffffff",
+      "sizes": "360x640",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Hermes auf dem Smartphone"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#f0f2f5",
+  "theme-color": "#6366f1",
+  "display": "standalone",
+  "orientation": "portrait"
+}

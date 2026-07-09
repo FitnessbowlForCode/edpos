@@ -2,6 +2,7 @@ services:
   # --- Nginx Proxy Manager ---
   npm:
     container_name: ${nginx_container_name}
+    hostname: app2-proxy2
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
     ports:
@@ -13,6 +14,7 @@ services:
       - ./nginx/letsencrypt:/etc/letsencrypt
     networks:
       - backend
+      - testnet
 
   # --- Vikunja Application ---
   vikunja:
@@ -38,7 +40,6 @@ services:
       VIKUNJA_DATABASE_DATABASE: ${vik_db_db}
 
       XDG_CACHE_HOME: /app/vikunja/.cache
-
     volumes:
       - ./vikunja/files:/app/vikunja/files
       - ./vikunja/cache:/app/vikunja/.cache
@@ -81,8 +82,6 @@ services:
       - ./wordpress/data:/var/www/html
     networks:
       - backend
-        #ports:
-        #- '22222:80'
     depends_on:
       - wordpress-db
 
@@ -104,3 +103,6 @@ services:
 networks:
   backend:
     driver: bridge
+  testnet:
+    name: test_network
+    external: true

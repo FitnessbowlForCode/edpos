@@ -1,0 +1,275 @@
+/* Globale Stile */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background: #C9DAEA;
+    color: #191516;
+}
+
+h1 {
+    color: #AB2346;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Karten-Layout */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+/* Formular-Elemente */
+input[type="file"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #00B295;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: inherit;
+    background-color: #f8fafc;
+    color: #191516;
+}
+
+label {
+    font-weight: bold;
+    color: #191516;
+}
+
+select {
+    width: auto;
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #00B295;
+    border-radius: 4px;
+    font-family: inherit;
+    background: white;
+    color: #191516;
+}
+
+/* Buttons */
+button {
+    background: #00B295;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    font-size: 16px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+    background: #AB2346;
+}
+
+button:disabled {
+    background: #C9DAEA;
+    color: #191516;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Spezifische Navigations- & Interationsbuttons */
+.back-btn {
+    background: #191516;
+    margin-bottom: 15px;
+    width: auto;
+    padding: 8px 15px;
+}
+
+.back-btn:hover {
+    background: #AB2346;
+}
+
+#toggleUploadBtn {
+    background: #191516;
+    color: white;
+    width: auto;
+    padding: 6px 14px;
+    font-size: 14px;
+}
+
+#toggleUploadBtn:hover {
+    background: #AB2346;
+}
+
+.interaction-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.interaction-buttons button {
+    background: #C9DAEA;
+    color: #191516;
+    width: auto;
+    padding: 6px 14px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.interaction-buttons button:hover {
+    background: #03F7EB;
+}
+
+/* Video Grid (YouTube Style) */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.video-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #C9DAEA;
+}
+
+.video-info {
+    padding: 15px;
+}
+
+.video-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: #191516;
+}
+
+.video-desc {
+    font-size: 13px;
+    color: #191516;
+    opacity: 0.8;
+    margin: 0 0 10px 0;
+}
+
+/* Watch View Komponenten */
+#singleVideoPlayer {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #191516;
+    border-radius: 8px;
+    display: block;
+}
+
+.video-info-watch {
+    padding: 15px 0;
+}
+
+#singleVideoTitle {
+    margin: 0 0 10px 0;
+    color: #191516;
+}
+
+.video-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #191516;
+    opacity: 0.9;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.quality-selector {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+#singleVideoDesc {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #191516;
+    margin-top: 15px;
+}
+
+/* Kommentare */
+.comments-section {
+    margin-top: 20px;
+}
+
+.comment-input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-input-row button {
+    width: auto;
+    padding: 10px 20px;
+    background: #191516;
+}
+
+.comment-input-row button:hover {
+    background: #AB2346;
+}
+
+#commentsList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.no-comments {
+    color: #191516;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Badges & Statussymbole */
+.badge {
+    background: #AB2346;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.status {
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    display: none;
+}
+
+.status.success {
+    background: #00B295;
+    color: white;
+    display: block;
+}
+
+.status.error {
+    background: #AB2346;
+    color: white;
+    display: block;
+}
+
+/* Trennlinien & Abstände */
+.divider {
+    border: 0;
+    border-top: 1px solid #C9DAEA;
+}
+
+.divider.font-space {
+    margin-top: 20px;
+}
