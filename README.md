@@ -1,7 +1,6 @@
-# # <Projektname>
+# # EDPOS
 
 [![Status](https://img.shields.io/badge/status-aktiv-brightgreen.svg)]()
-[![Lizenz](https://img.shields.io/badge/lizenz-MIT-blue.svg)]()
 
 Die Video-Apps Apollo und Hermes sind Teil der EDPOS-Projekts. Sie stellen ein Prof-of-Concpet dar.
 -Webseite der Projekts-
@@ -13,22 +12,15 @@ https://plus-app1.duckdns.org/
 https://plus-app2.duckdns.org/
 ---
 
-## 📋 Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
 - [Über das Projekt](#-über-das-projekt)
+- [Aufbau](#-aufbau)
 - [Features](#-features)
-- [Erste Schritte](#-erste-schritte)
-  - [Voraussetzungen](#voraussetzungen)
-  - [Installation](#installation)
-- [Verwendung](#-verwendung)
-- [Roadmap](#-roadmap)
-- [Beitragen](#-beitragen)
-- [Lizenz](#-lizenz)
-- [Kontakt](#-kontakt)
 
 ---
 
-## 🚀 Über das Projekt
+## Über das Projekt
 
 Hier kannst du etwas weiter ausholen. Warum hast du das Projekt gestartet? Welche Technologien hast du verwendet und warum?
 
@@ -40,8 +32,10 @@ Hier kannst du etwas weiter ausholen. Warum hast du das Projekt gestartet? Welch
 
 ---
 
-## ✨ Features
+## Features
 
 * **Feature 1:** Kurze Beschreibung des coolen Features.
 * **Feature 2:** Noch ein tolles Feature, das erwähnenswert ist.
 * **Responsive Design:** Sieht auf Desktop und Mobilgeräten super aus.
+
+---
