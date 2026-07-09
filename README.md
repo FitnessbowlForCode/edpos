@@ -26,10 +26,13 @@ Hier kannst du etwas weiter ausholen. Warum hast du das Projekt gestartet? Welch
 
 ### Gebaut mit
 
-* [React](https://reactjs.org/)
-* [Node.js](https://nodejs.org/)
-* [Tailwind CSS](https://tailwindcss.com/)
-
+* [Vikunja](https://vikunja.io/)
+* [Wordpress](https://wordpress.org/)
+* [Docker](https://www.docker.com/)
+* [minio](https://www.min.io/)
+* [JavaScript]
+* [Python]
+* [pip](https://pypi.org/)
 ---
 
 ## Features
