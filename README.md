@@ -22,7 +22,7 @@ Hermes: https://plus-app2.duckdns.org/
 Apollo und Hermes sind Produkte aus dem EDPOS-Projekt. EDPOS ist eine Initiative, die ausarbeitet, wie Videoplattformen nach europäischen Richtlinien gestaltet sein könnten.
 
 ### Was sind Apollo und Hermes?
-Apollo und Hermes stellen zwei unabhängige Videoplattformen dar. Im Rahmen des Proof of Concept wurden Apollo und Hermes von zwei unterschiedlichen Unternehmen entwickelt.
+Apollo und Hermes stellen zwei unabhängige Videoplattformen dar. Im Rahmen des Proof of Concept wurden Apollo und Hermes von zwei unterschiedlichen Unternehmen (theretisch) entwickelt.
 
 ### Wie funktioniert es?
 Die Kernfunktion nennt sich Cross-Kompatibilität. Obwohl Apollo und Hermes theoretisch von zwei Unternehmen unabhängig voneinander entwickelt wurden, sind beide Videoplattformen bis zu einem gewissen Grad miteinander verbunden.
@@ -31,7 +31,7 @@ Die Kernfunktion nennt sich Cross-Kompatibilität. Obwohl Apollo und Hermes theo
 Videos, Kommentare, Likes und andere Interaktionen werden auf beiden Plattformen synchronisiert und dargestellt. Wenn du beispielsweise Apollo öffnest, bekommst du auch Videos von Hermes vorgeschlagen und umgekehrt.
 
 ### Wieso ist das eine Kernfunktion?
-In unserem Projekt spielt die digitale Unabhängigkeit Europas eine zentrale Rolle. Wir gehen davon aus, dass Europa es auch zukünftig schwer haben wird, ein einzelnes großes Unternehmen im Bereich der Videoplattformen zu etablieren, das der Konkurrenz aus den USA oder China die Stirn bieten kann.
+In unserem EDPOS-Projekt spielt die digitale Unabhängigkeit Europas eine zentrale Rolle. Wir gehen davon aus, dass Europa es auch zukünftig schwer haben wird, ein einzelnes großes Unternehmen im Bereich der Videoplattformen zu etablieren, das der Konkurrenz aus den USA oder China die Stirn bieten kann.
 
 Wir sehen jedoch Potenzial in vielen kleinen, europäischen Unternehmen. Alleine wären diese zwar nicht konkurrenzfähig, aber durch unser Konzept der Vernetzung bilden sie ein großes Kollektiv, das in der Theorie auch mit den großen Videoplattformen konkurrieren kann.
 
