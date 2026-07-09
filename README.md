@@ -81,16 +81,15 @@ Die Kernkomponente der Arbeit ist die netzwerkbasierte Föderation. Die Server a
 #### Der Video-Feed (Cross-Site-Query)
 Wenn ein Benutzer den Video-Feed im Browser aufruft, passiert Folgendes im Hintergrund:
 1. Das Backend fragt die lokalen Videos aus der eigenen PostgreSQL-Datenbank ab.
-2. Gleichzeitig sendet das Backend über einen asynchronen HTTP-Client (`httpx`) eine Anfrage an den konfigurierten Nachbar-Server (`NEXT_NEIGHBOR_API/videos`).
-3. **Endlosschleifen-Schutz (Ping-Pong-Sperre):** Um zu verhindern, dass sich die Server unendlich gegenseitig abfragen, wird ein spezieller HTTP-Header (`X-Federation: True`) mitgesendet. Erkennt ein Backend diesen Header, liefert es *nur* seine eigenen lokalen Videos zurück und fragt nicht erneut seinen Nachbarn ab.
+2. Gleichzeitig sendet das Backend über einen asynchronen HTTP-Client eine Anfrage an den konfigurierten Nachbar-Server(Apollo oder Hermes).
+3. **Endlosschleifen-Schutz (Ping-Pong-Sperre):** Um zu verhindern, dass sich die Server unendlich gegenseitig abfragen, wird ein spezieller HTTP-Header mitgesendet. Erkennt ein Backend diesen Header, liefert es *nur* seine eigenen lokalen Videos zurück und fragt nicht erneut seinen Nachbarn ab.
 4. Das Backend führt beide Listen zusammen, filtert Duplikate anhand der eindeutigen IDs heraus, sortiert den Feed global nach dem neuesten Zeitstempel und liefert ihn an das Frontend aus.
 
 #### Föderierte Interaktionen (Views, Likes & Kommentare)
 Um die Datenintegrität relationaler Datenbanken (Foreign Key Constraints) über Servergrenzen hinweg zu wahren, werden Interaktionen intelligent geroutet:
-* **Herkunfts-Erkennung:** Jedes Video besitzt eine eindeutige ID mit einem Server-Präfix (`app1_` oder `app2_`).
+* **Herkunfts-Erkennung:** Jedes Video besitzt eine eindeutige ID mit einem Server-Präfix (`apollo_` oder `hermes_`).
 * **Lokale Interaktion:** Gehört das Video dem Server, auf dem der Nutzer sich befindet, wird die Interaktion direkt in die lokale PostgreSQL-Datenbank geschrieben.
-* **Netzwerk-Tunneling:** Interagiert ein Nutzer mit einem "Fremd-Video", fängt das lokale Backend den Request ab, verweigert den lokalen Schreibzugriff (da das Video in der lokalen DB-Tabelle fehlt) und tunnelt den Call via HTTP-Post an das Backend des Ursprungsservers.
-* **Branding:** Bei Kommentaren wird der Herkunftsort automatisch im Text verewigt (z. B. `[Kommentartext] (via App 1)`), sodass im Feed sofort ersichtlich ist, dass dieser Inhalt von einer externen Plattform stammt.
+* **Branding:** Bei Kommentaren wird der Herkunftsort automatisch im Text verewigt (z. B. `[Kommentartext] (via Hermes)`), sodass im Feed sofort ersichtlich ist, dass dieser Inhalt von einer externen Plattform stammt.
 
 ---
 
