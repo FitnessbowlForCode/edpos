@@ -58,8 +58,6 @@ Jede Instanz ist als containerisierte Microservice-Architektur mittels **Docker 
 * **MinIO (S3 Object Storage):** Lokaler, S3-kompatibler Objektspeicher zur persistenten Ablage der generierten Videosegmente und Thumbnails.
 * **Nginx Proxy Manager:** Verwaltet das Routing, übernimmt das SSL-Offloading (Let's Encrypt HTTPS) und bindet die Container über ein isoliertes Docker-Netzwerk an.
 
----
-
 ### 2. Video-Infrastruktur & Adaptive Streaming (HLS)
 
 Um Bandbreite zu schonen und eine flüssige Wiedergabe auf allen Endgeräten zu garantieren, wird kein rohes MP4-Material ausgeliefert. Stattdessen setzt das System auf **HTTP Live Streaming (HLS)**:
@@ -71,8 +69,6 @@ Um Bandbreite zu schonen und eine flüssige Wiedergabe auf allen Endgeräten zu 
    * **1080p** (1920x1080) für Full-HD-Wiedergabe.
 3. **Segmentierung:** Die Videostreams werden in kurze, 4 Sekunden lange Segmente (`.ts`-Dateien) zerschnitten. Parallel wird eine Master-Playlist (`master.m3u8`) generiert, die als Index für den Videoplayer dient.
 4. **S3-Upload:** Alle Segmente, Playlists und ein extrahiertes JPEG-Thumbnail werden mit dynamischen Content-Types in das MinIO-Bucket geladen und in der PostgreSQL-Datenbank registriert.
-
----
 
 ### 3. Dezentrale Föderation & Server-Sharing (Das "Fediverse"-Prinzip)
 
