@@ -30,9 +30,9 @@ Hier kannst du etwas weiter ausholen. Warum hast du das Projekt gestartet? Welch
 * [Wordpress](https://wordpress.org/)
 * [Docker](https://www.docker.com/)
 * [minio](https://www.min.io/)
+* [pip](https://pypi.org/)
 * [JavaScript]
 * [Python]
-* [pip](https://pypi.org/)
 ---
 
 ## Features
