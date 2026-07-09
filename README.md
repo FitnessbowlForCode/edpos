@@ -43,7 +43,8 @@ Wir sehen jedoch Potenzial in vielen kleinen, europäischen Unternehmen. Alleine
 * [MinIO](https://www.min.io/)
 
 ### Geschrieben in
-
+* [HTML]
+* [CSS]
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Python](https://www.python.org/)
 * [pip](https://pypi.org/) (Paketverwaltung für Python)
